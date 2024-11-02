@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  line-height: 1;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #4b3d3d;
+}
+
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.heading-primary {
+  font-family: "Rubik Wet Paint", system-ui;
+  font-size: 4.4rem;
+  text-align: center;
+  text-shadow: 4px 8px rgba(0, 0, 0, 0.07);
+  margin-block: 3.2rem;
+}
+
+.game-rule {
+  background: linear-gradient(135deg, #4b3d3d, #776b6b);
+  color: #f5e8dc;
+  max-width: 95rem;
+  margin: 2.4rem auto;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  padding: 2.4rem;
+  border-radius: 15% 20% 25% 30%;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+}
+
+.game-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.game {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 204, 188, 0.4),
+    rgba(102, 51, 153, 0.3)
+  );
+  padding: 3.2rem;
+  max-width: 75rem;
+  margin: 3.2rem auto;
+}
+
+.player,
+.chance {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chance {
+  color: #000;
+}
+
+.main-game {
+  margin-top: 3.6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.main-game-top {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #444;
+}
+
+.game-board {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 50rem;
+  margin: 3.2rem auto;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ff8c66, #ff3d54);
+  color: #fff7e6;
+  border: none;
+  padding: 1.6rem 3.2rem;
+  border-radius: 100px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff3d54, #ff8c66);
+}
+
+.dice {
+  height: 5rem;
+}
+
+.player-score {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.score {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.player-winner {
+  font-size: 2.4rem;
+  background-color: rgb(76, 152, 76);
+  padding: 1.6rem;
+  border-radius: 9px;
+  text-align: center;
+  margin: 4.8rem;
+  color: #000;
+  font-weight: 700;
+}
