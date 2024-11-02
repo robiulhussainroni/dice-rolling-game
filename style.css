@@ -155,3 +155,20 @@ a:visited {
   color: #000;
   font-weight: 700;
 }
+
+/* Responsive */
+/* 752px */
+
+@media (max-width: 47em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* 560px */
+
+@media (max-width: 35em) {
+  html {
+    font-size: 50%;
+  }
+}
