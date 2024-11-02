@@ -39,7 +39,7 @@ document.getElementById("btn-roll").addEventListener("click", function () {
       if (score[0] > score[1]) {
         document.querySelector(".winner").textContent = 1;
       } else if (score[0] < score[1]) {
-        document.querySelector(".winner").textContent = 1;
+        document.querySelector(".winner").textContent = 2;
       } else {
         document.querySelector(".player-winner").textContent = "Match Drawn";
       }
