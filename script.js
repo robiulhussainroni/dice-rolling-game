@@ -1,47 +1,56 @@
 "use strict";
 
-document.querySelector(".dice").classList.add("hidden");
-document.getElementById("dice-score").textContent = "...";
+// Selectors
+const dice = document.querySelector(".dice");
+const diceScore = document.getElementById("dice-score");
+const btnRoll = document.getElementById("btn-roll");
+const chanceDisplay = document.getElementById("chance");
+const player0 = document.querySelector(".player-0");
+const player1 = document.querySelector(".player-1");
+const playerWinner = document.querySelector(".player-winner");
+const winner = document.querySelector(".winner");
+
+dice.classList.add("hidden");
+diceScore.textContent = "...";
 let currentscore = [0, 0];
 let score = [0, 0];
 let chance = 5;
 let activePlayer = 0;
 let count = 10;
 let playing = true;
-document.getElementById("btn-roll").addEventListener("click", function () {
+btnRoll.addEventListener("click", function () {
   if (playing) {
-    const dice = Math.trunc(Math.random() * 6) + 1;
-    document.querySelector(".dice").classList.remove("hidden");
-    document.querySelector(".dice").src = `img/dice-${dice}.png`;
-    document.getElementById("dice-score").textContent = dice;
+    const diceNumber = Math.trunc(Math.random() * 6) + 1;
+    dice.classList.remove("hidden");
+    dice.src = `img/dice-${diceNumber}.png`;
+    diceScore.textContent = diceNumber;
 
-    currentscore[activePlayer] += dice;
+    currentscore[activePlayer] += diceNumber;
     score[activePlayer] = currentscore[activePlayer];
-    document.querySelector(
-      `.player-${activePlayer}-score`
-    ).textContent = `${score[activePlayer]}`;
+    document.querySelector(`.player-${activePlayer}-score`).textContent =
+      `${score[activePlayer]}`;
 
     document.getElementById("chance").textContent = chance - 1;
     chance--;
     if (chance < 1) {
       activePlayer = 1;
       chance = 5;
-      document.getElementById("chance").textContent = chance;
-      document.querySelector(".player-0").classList.add("hidden");
-      document.querySelector(".player-1").classList.remove("hidden");
+      chanceDisplay.textContent = chance;
+      player0.classList.add("hidden");
+      player1.classList.remove("hidden");
     }
     count--;
     if (count < 1) {
       playing = false;
       chance = 0;
-      document.getElementById("chance").textContent = chance;
-      document.querySelector(".player-winner").classList.remove("hidden");
+      chanceDisplay.textContent = chance;
+      playerWinner.classList.remove("hidden");
       if (score[0] > score[1]) {
-        document.querySelector(".winner").textContent = 1;
+        winner.textContent = 1;
       } else if (score[0] < score[1]) {
-        document.querySelector(".winner").textContent = 2;
+        winner.textContent = 2;
       } else {
-        document.querySelector(".player-winner").textContent = "Match Drawn";
+        playerWinner.textContent = "Match Drawn";
       }
     }
   }
