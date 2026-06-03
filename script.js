@@ -45,13 +45,11 @@ btnRoll.addEventListener("click", function () {
       chance = 0;
       chanceDisplay.textContent = chance;
       playerWinner.classList.remove("hidden");
-      if (score[0] > score[1]) {
-        winner.textContent = 1;
-      } else if (score[0] < score[1]) {
-        winner.textContent = 2;
-      } else {
-        playerWinner.textContent = "Match Drawn";
-      }
+      score[0] > score[1]
+        ? (winner.textContent = 1)
+        : score[0] < score[1]
+          ? (winner.textContent = 2)
+          : (playerWinner.textContent = "Match Drawn");
     }
   }
 });
